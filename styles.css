@@ -1,0 +1,102 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f7fb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.container .steps {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container .steps .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #999;
+  font-size: 22px;
+  font-weight: 500;
+  border: 4px solid #e0e0e0;
+  transition: all 0.3s ease;
+  transition-delay: 0s;
+}
+
+.container .steps .circle.active {
+  transition-delay: 0.1s;
+  border-color: #4070f4;
+  color: #4070f4;
+}
+
+.container .steps .progress-bar {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.container .steps .progress-bar .indicator {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: #4070f4;
+  transition: all 0.3s ease;
+}
+
+.container .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.container .buttons button {
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #4070f4;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .buttons button:active {
+  transform: scale(0.97);
+}
+
+.container .buttons button:disabled {
+  background-color: #87a5f8;
+  cursor: not-allowed;
+}
